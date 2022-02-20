@@ -1,0 +1,14 @@
+{
+  "id": "customKibanaLogo",
+  "version": "1.0.0",
+  "kibanaVersion": "kibana",
+  "owner": {
+    "name": "lizozom",
+    "githubTeam": ""
+  },
+  "description": "Customize Kibana CSS",
+  "server": false,
+  "ui": true,
+  "requiredPlugins": [],
+  "optionalPlugins": []
+}
