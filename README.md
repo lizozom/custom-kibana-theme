@@ -6,8 +6,8 @@ A Kibana plugin that allows you to customize:
 - The login form text and logo
 - The Kibana loading page and text (except for during initial load of an unauthenticated user)
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/readme_img/main_icon.jpg?raw=true)
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/readme_img/login_form.jpg?raw=true)
+![alt text](https://github.com/lizozom/custom-kibana-logo/blob/main/readme_img/main_icon.png?raw=true)
+![alt text](https://github.com/lizozom/custom-kibana-logo/blob/main/readme_img/login_form.png?raw=true)
 
 ---
 
