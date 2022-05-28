@@ -5,9 +5,11 @@ This tutorial will provide step-by-step instructions on how to create, install a
 ## Step 1: Create plugin
 
 In the top level of your plugin folder, run the following command:
+
 node ../../scripts/plugin_helpers
 
 NOTE ONE: When it asks for version, the format should be as follows: major.minor.patch (e.g. 8.2.0) and this plugin will only work for this version.
+
 NOTE TWO: The plugin is a zip file located in the build folder.
 
 
