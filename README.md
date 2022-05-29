@@ -6,12 +6,13 @@ A Kibana plugin that allows you to customize:
 - The login form text and logo
 - The Kibana loading page and text (except for during initial load of an unauthenticated user)
 
-![alt text](https://github.com/lizozom/custom-kibana-logo/blob/main/readme_img/main_icon.png?raw=true)
-![alt text](https://github.com/lizozom/custom-kibana-logo/blob/main/readme_img/login_form.png?raw=true)
+![alt text](readme_img/main_icon.png)
+![alt text](readme_img/login_form.png)
 
 ---
 
 ## Development
 
-1. Modify the URLs and texts in `index.scss`
-2. Follow the instructions to add the custom plugin to your deployment.
+1. [Set up the Kibana plugin development environment](docs/DEVELOPMENT_GUIDE.md)
+2. Modify the URLs and texts in [index.scss](public/index.scss)
+3. [Create, install and remove a Kibana plugin](docs/DEPLOYMENT_GUIDE.md)
