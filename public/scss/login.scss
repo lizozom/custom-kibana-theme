@@ -9,52 +9,63 @@
     line-height: initial; 
 }
 
-.loginWelcome {
-    /*
-     * Change the login form icon and text
-     */
+.ckl-app-security_login {
+    .loginWelcome {
+        // Remove background design 
+         &::before {
+            content: '';
+         }
     
-    .loginWelcome__header {
-        .loginWelcome__logo {
-            svg {
-                display: none !important;
+        // Remove background design 
+         &::after {
+            content: '';
+         }
+        
+        /*
+         * Change the login form icon and text
+         */
+        .loginWelcome__header {
+            .loginWelcome__logo {
+                svg {
+                    display: none !important;
+                }
+        
+                &:after {
+                    content: '';
+                    display: flex;
+                    background-position: center;
+                    background-image: url('https://i.postimg.cc/CL6xvS7q/whale-tales-logo-no-text.png');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: 48px;
+                    height: 48px;
+                }
             }
-    
-            &:after {
-                content: '';
-                display: flex;
-                background-position: center;
-                background-image: url('https://i.postimg.cc/CL6xvS7q/whale-tales-logo-no-text.png');
-                background-repeat: no-repeat;
-                background-size: contain;
-                width: 48px;
-                height: 48px;
+        
+            .loginWelcome__title {
+                @include hideOldContent;
+        
+                &:after {
+                    @include showNewContent;
+                    content: 'Welcome to Whales Tales';
+                }
             }
+        
         }
-    
-        .loginWelcome__title {
-            @include hideOldContent;
-    
-            &:after {
-                @include showNewContent;
-                content: 'Welcome to Whales Tales';
+        
+        .loginWelcome__content {
+            .euiCallOut {
+                background-color: lightblue;
             }
-        }
-    
-    }
-    
-    .loginWelcome__content {
-        .euiCallOut {
-            background-color: lightblue;
-        }
-    
-        .euiCallOut .euiCallOutHeader__title {
-            @include hideOldContent;
-            &:after {
-                @include showNewContent;
-                color: darkblue !important; 
-                content: "You have logged out of Whale Tales."
-    
+        
+            .euiCallOut .euiCallOutHeader__title {
+                @include hideOldContent;
+                &:after {
+                    @include showNewContent;
+                    color: darkblue !important; 
+                    content: "You have logged out of Whale Tales."
+        
+                }
             }
         }
     }
