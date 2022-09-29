@@ -25,13 +25,14 @@ Since it is shown before any css is loaded, it is impossible to change that load
 Checkout the appropriate version of kibana
 
 ```
-git clone --single-branch --branch 7.17 https://github.com/elastic/kibana.git kibana-7.17
+git clone https://github.com/elastic/kibana.git kibana
+git checkout 7.17
 ```
 
 Setup the kibana for local development
 
 ```
-cd kibana-7.17
+cd kibana
 yarn kbn bootstrap 
 ```
 
