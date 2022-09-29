@@ -61,3 +61,10 @@ yarn start
 Kibana should start with the plugin on.
 It will watch any changes in the plugin and rebuild it as needed.
 
+### Changing Kibana fonts
+If you decide to change the font of Kibana, make sure to customize the `Content Security Policy` with the base URL of font in `kibana.yml`
+
+```
+csp.style_src: ["FONT_BASE_URL"]
+csp.font_src: ["FONT_BASE_URL"]
+```
