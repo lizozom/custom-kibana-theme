@@ -1,13 +1,5 @@
-@mixin hideOldContent {
-    text-indent: -9999px;
-    line-height: 0 !important;
-}
+@import './helpers';
 
-@mixin showNewContent {
-    text-indent: 0;
-    display: block;
-    line-height: initial; 
-}
 
 .ckl-app-security_login {
     .loginWelcome {
