@@ -1,0 +1,22 @@
+
+/*
+ * Change the header color
+ */
+
+ .ckl-app-home {
+
+    /*
+     * Change the top nav color only on the home page
+     */
+    .euiHeader.header__firstBar {
+       background-color: darkblue !important;
+       border-bottom-color: darkblue !important;
+   }
+   
+    /*
+     * Hide a homepage section
+     */
+   section.homDataAdd {
+       display: none;
+   }
+ }
