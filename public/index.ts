@@ -1,6 +1,8 @@
 import './scss/global.scss';
 import './scss/loader.scss';
 import './scss/login.scss';
+import './scss/dashboard.scss';
+import './scss/home.scss';
 
 import { CustomKibanaLogoPlugin } from './plugin';
 

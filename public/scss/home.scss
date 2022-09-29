@@ -1,0 +1,15 @@
+
+/*
+ * Change the header color
+ */
+
+ .app-home {
+    .euiHeader.header__firstBar {
+       background-color: darkblue !important;
+       border-bottom-color: darkblue !important;
+   }
+   
+   section.homDataAdd {
+       display: none;
+   }
+ }
