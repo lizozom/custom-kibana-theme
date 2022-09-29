@@ -4,6 +4,7 @@ import './scss/login.scss';
 import './scss/dashboard.scss';
 import './scss/home.scss';
 import './scss/space_selector.scss';
+import './scss/fonts.scss';
 
 import { CustomKibanaLogoPlugin } from './plugin';
 
