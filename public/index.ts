@@ -1,4 +1,4 @@
-import './scss/global.scss';
+import './scss/header.scss';
 import './scss/loader.scss';
 import './scss/login.scss';
 import './scss/dashboard.scss';
