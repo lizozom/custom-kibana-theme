@@ -1,0 +1,46 @@
+/*
+ * Change the main Kibana logo
+ */
+
+#globalHeaderBars {
+    /*
+     * Change the main logo
+     */
+    .euiHeaderLogo {
+        svg {
+            display: none !important;
+        }
+
+        &:after {
+            content: '';
+            background-position: center;
+            background-image: url('https://i.postimg.cc/wjyTZZ4b/whale-tales-logo.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 150px;
+            height: 40px;
+        }
+    }
+
+    /*
+     * Change the search bar text
+     */
+    .kbnSearchBar {
+        &::placeholder {
+            // Hides the placeholder.
+            // Seems like content does not work on the placeholder pseudo element (?)
+            opacity: 0;
+        }
+    }
+
+    /*
+     * Hide the news button
+     */
+    .euiHeaderSectionItemButton[data-test-subj=newsfeed] {
+        display: none;
+
+    }
+
+
+
+}
