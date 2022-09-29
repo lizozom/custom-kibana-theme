@@ -9,6 +9,7 @@
   "description": "Customize Kibana CSS",
   "server": false,
   "ui": true,
+  "enabledOnAnonymousPages": true,
   "requiredPlugins": [],
   "optionalPlugins": []
 }
