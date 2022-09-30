@@ -20,9 +20,11 @@ Since it is shown before any css is loaded, it is impossible to change that load
 
 ---
 
-## Prerequisites
+## Development
 
-### Node
+### Prerequisites
+
+#### Node
 
 Running Kibana in development mode requires having `node` installed.
 
@@ -34,7 +36,7 @@ Install the right version by running:
 nvm install VERSION
 ```
 
-### yarn
+#### yarn
 
 Install `yarn` by running: 
 
@@ -42,7 +44,7 @@ Install `yarn` by running:
 npm install --global yarn
 ```
 
-## Development
+### Environment setup
 
 Checkout the appropriate version of kibana
 
