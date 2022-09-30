@@ -20,19 +20,41 @@ Since it is shown before any css is loaded, it is impossible to change that load
 
 ---
 
+## Prerequisites
+
+### Node
+
+Running Kibana in development mode requires having `node` installed.
+
+The most convenient way is to install `nvm`, then once you checkout the kibana repository, run `nvm use` to know which version of node to use.
+
+Install the right version by running:
+
+```
+nvm install VERSION
+```
+
+### yarn
+
+Install `yarn` by running: 
+
+```
+npm install --global yarn
+```
+
 ## Development
 
 Checkout the appropriate version of kibana
 
 ```
-git clone https://github.com/elastic/kibana.git kibana
-git checkout 7.17
+git clone https://github.com/elastic/kibana.git
+cd kibana
+git checkout KIBANA_VERSION
 ```
 
 Setup the kibana for local development
 
 ```
-cd kibana
 yarn kbn bootstrap 
 ```
 
@@ -55,7 +77,7 @@ Start Kibana in dev mode (This might take a while the first time)
 
 ```
 cd ..
-yarn start
+yarn start --no-base-path
 ```
 
 Kibana should start with the plugin on.
@@ -68,3 +90,22 @@ If you decide to change the font of Kibana, make sure to customize the `Content 
 csp.style_src: ["FONT_BASE_URL"]
 csp.font_src: ["FONT_BASE_URL"]
 ```
+
+## Production
+
+Navigate into the plugin directory (within the kibana repository) and build it:
+
+```
+cd plugins/custom-kibana-logo
+yarn build
+```
+
+This builds the plugin into a `zip` file under the `build` folder.
+
+Place the build file on a web hosting or copy it to the deployment where you intend to install it, then install the plugin by running:
+
+```
+bin/kibana-plugin install PATH_TO_ZIP
+```
+
+More documentation on how to install a plugin from a `zip` file can be found [here](https://www.elastic.co/guide/en/kibana/master/kibana-plugins.html).
