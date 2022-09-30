@@ -18,8 +18,6 @@ A Kibana plugin to customise the Kibana UI, including:
 When Kibana first loads, it shows a Kibana loader for a few seconds. 
 Since it is shown before any css is loaded, it is impossible to change that loader without modifying the source code of the plugin.
 
----
-
 ## Development
 
 ### Prerequisites
