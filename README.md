@@ -89,12 +89,12 @@ csp.style_src: ["FONT_BASE_URL"]
 csp.font_src: ["FONT_BASE_URL"]
 ```
 
-## Production
+## Installing the plugin
 
 Navigate into the plugin directory (within the kibana repository) and build it:
 
 ```
-cd plugins/custom-kibana-logo
+cd plugins/custom-kibana-theme
 yarn build
 ```
 
