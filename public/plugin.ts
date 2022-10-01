@@ -2,22 +2,22 @@ import { CoreSetup, CoreStart, Plugin } from '../../../src/core/public';
 import { CUSTOM_NAME } from './consts';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface CustomKibanaLogoPluginContract {}
+export interface CustomKibanaThemePluginContract {}
 
-export class CustomKibanaLogoPlugin
-  implements Plugin<CustomKibanaLogoPluginContract, CustomKibanaLogoPluginContract>
+export class CustomKibanaThemePlugin
+  implements Plugin<CustomKibanaThemePluginContract, CustomKibanaThemePluginContract>
 {
   private curAppClass?: string;
 
   constructor() {
-    console.log('Loaded CustomKibanaLogoPlugin');
+    console.log('Loaded CustomKibanaThemePlugin');
 
     // Update the favicon programatically
     this.changeFavicon();
     this.setupTabNameListener();
   }
 
-  public setup(core: CoreSetup): CustomKibanaLogoPluginContract {
+  public setup(core: CoreSetup): CustomKibanaThemePluginContract {
     // Registration is done here so not to miss the first event
     core.getStartServices().then(start => {
 
@@ -30,7 +30,7 @@ export class CustomKibanaLogoPlugin
     return {};
   }
 
-  public start(core: CoreStart): CustomKibanaLogoPluginContract {
+  public start(core: CoreStart): CustomKibanaThemePluginContract {
     // You can place programmatic hooks here
     return {};
   }

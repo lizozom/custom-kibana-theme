@@ -1,4 +1,4 @@
-# Custom Kibana Logo
+# Custom Kibana Theme
 
 A Kibana plugin to customise the Kibana UI, including:
 - Loader logo and text
@@ -52,7 +52,7 @@ cd kibana
 git checkout KIBANA_VERSION
 ```
 
-Setup the kibana for local development
+Setup the kibana for local development (This might take a while the first time)
 
 ```
 yarn kbn bootstrap 
@@ -63,20 +63,18 @@ You may also fork the project to customize it and check out your own version of 
 
 ```
 cd plugins
-git clone https://github.com/lizozom/custom-kibana-logo.git
+git clone https://github.com/lizozom/custom-kibana-theme.git
 ```
 
 Go back to the kibana folder and start Elasticsearch in dev mode
 
 ```
-cd ..
 yarn es snapshot
 ```
 
-Start Kibana in dev mode (This might take a while the first time)
+In parallel, start Kibana in dev mode (This might take a while the first time)
 
 ```
-cd ..
 yarn start --no-base-path
 ```
 
