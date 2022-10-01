@@ -3,6 +3,10 @@ import { CUSTOM_NAME } from './consts';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface CustomKibanaThemePluginContract {}
+interface FaviconConfig {
+  emoji?: string;
+  href?: string;
+}
 
 export class CustomKibanaThemePlugin
   implements Plugin<CustomKibanaThemePluginContract, CustomKibanaThemePluginContract>
@@ -13,7 +17,9 @@ export class CustomKibanaThemePlugin
     console.log('Loaded CustomKibanaThemePlugin');
 
     // Update the favicon programatically
-    this.changeFavicon();
+    this.changeFavicon({
+      emoji: '🐋',
+    });
     this.setupTabNameListener();
   }
 
@@ -38,26 +44,36 @@ export class CustomKibanaThemePlugin
   public stop() {}
 
   // Changes the favicon
-  private changeFavicon() {
-    const canvas = document.createElement('canvas');
-    canvas.height = 64;
-    canvas.width = 64;
-    const ctx = canvas.getContext('2d')!;
-    ctx.font = '64px serif';
-    ctx.fillText('🐋', 0, 64);
+  private changeFavicon({emoji, href}: FaviconConfig) {
+    let faviconHref: string | undefined = undefined;
 
-    const link = document.createElement('link');
-    const oldLinks = document.querySelectorAll('link[rel~="icon"]');
-    oldLinks.forEach(e => e.parentNode?.removeChild(e));
-    link.id = 'dynamic-favicon';
-    link.rel = 'shortcut icon';
-    link.href = canvas.toDataURL();
-    document.head.appendChild(link);
+    if (href) {
+      faviconHref = href;
+    } else if (emoji) {
+      const canvas = document.createElement('canvas');
+      canvas.height = 64;
+      canvas.width = 64;
+      const ctx = canvas.getContext('2d')!;
+      ctx.font = '64px serif';
+      ctx.fillText('🐋', 0, 64);
+
+      faviconHref = canvas.toDataURL();
+    }
+
+    if (faviconHref) {
+      const link = document.createElement('link');
+      const oldLinks = document.querySelectorAll('link[rel~="icon"]');
+      oldLinks.forEach(e => e.parentNode?.removeChild(e));
+      link.id = 'dynamic-favicon';
+      link.rel = 'shortcut icon';
+      link.href = faviconHref;
+      document.head.appendChild(link);
+    }
   }
 
   // Replaces the word `Elastic` in the tab name
   private setupTabNameListener() {
-    new MutationObserver(function (mutations) {
+    new MutationObserver(function () {
       const title = document.title;
       if (title) {
         let newTitle = document.title;
