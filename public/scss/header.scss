@@ -20,6 +20,10 @@
             width: 150px;
             height: 40px;
         }
+
+        &:focus {
+            background-color: inherit;
+        }
     }
 
     /*
