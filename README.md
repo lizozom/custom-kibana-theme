@@ -9,6 +9,8 @@ A Kibana plugin to customise the Kibana UI, including:
 - Dashboard colors
 - Fonts and font sizes
 
+Tested on Kibana 7.17 and 8.x.
+
 ![alt text](readme_img/home_page.png)
 ![alt text](readme_img/login_form.png)
 ![alt text](readme_img/space_selector.png)
