@@ -11,9 +11,9 @@ A Kibana plugin to customise the Kibana UI, including:
 
 Tested on Kibana 7.17 and 8.x.
 
-![alt text](readme_img/home_page.png)
-![alt text](readme_img/login_form.png)
-![alt text](readme_img/space_selector.png)
+![image](https://user-images.githubusercontent.com/3016806/193463904-1cf0239e-b2cd-4ad3-a302-b30e0917cf33.png)
+![image](https://user-images.githubusercontent.com/3016806/193463908-295b8f4f-7329-4de1-ab71-468fbee92195.png)
+![image](https://user-images.githubusercontent.com/3016806/193463914-f294257e-6fe6-4800-8714-949aa4c08092.png)
 
 ## Known limitations
 
