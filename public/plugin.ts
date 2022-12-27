@@ -1,6 +1,8 @@
 import { CoreSetup, CoreStart, Plugin } from '../../../src/core/public';
 import { CUSTOM_NAME } from './consts';
 
+import icon from './assets/whale-tales-logo-icon.ico';
+
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface CustomKibanaThemePluginContract {}
 interface FaviconConfig {
@@ -18,7 +20,9 @@ export class CustomKibanaThemePlugin
 
     // Update the favicon programatically
     this.changeFavicon({
-      emoji: '🐋',
+      href: icon,
+      // also supports an emoji favicon
+      // emoji: '🐋',
     });
     this.setupTabNameListener();
   }
