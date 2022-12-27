@@ -1,7 +1,9 @@
 .ckl-app-space_selector {
 
     // Modify the space seletor logo
-    .spcSpaceSelector__logo {
+    .spcSpaceSelector__logo,
+    /// Since 8.3 https://github.com/elastic/kibana/pull/131579
+    .kbnSolutionAvatar {
         svg {
             display: none !important;
         }
@@ -21,6 +23,10 @@
     // Remove background design 
     .spcSpaceSelector {
         &:before {
+            content: '';
+        }
+
+        &:after {
             content: '';
         }
     }
