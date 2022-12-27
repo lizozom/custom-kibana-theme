@@ -21,7 +21,8 @@ export class CustomKibanaThemePlugin
     // Update the favicon programatically
     this.changeFavicon({
       href: icon,
-	  //emoji: '🐋',
+      // also supports an emoji favicon
+      // emoji: '🐋',
     });
     this.setupTabNameListener();
   }
