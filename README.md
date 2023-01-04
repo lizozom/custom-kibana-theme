@@ -1,6 +1,6 @@
 # Custom Kibana Theme
 
-## How to customize kibana logo?
+## How to customize the Kibana logo?
 
 A Kibana plugin to customise the Kibana UI, including:
 - Loader logo and text
